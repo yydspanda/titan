@@ -1,0 +1,64 @@
+{
+  // =================================================================
+  // 核心：格式化与代码修复 (Formatting & Linting)
+  // 这是实现你所有需求的核心配置
+  // =================================================================
+
+  // 1. 为前端文件指定 Prettier 作为默认格式化工具
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+
+  // 2. 开启“保存时自动格式化”
+  // 这是第一步：Prettier 会先执行，整理代码的美观格式。
+  "editor.formatOnSave": true,
+
+  // 3. 开启“保存时自动运行 ESLint 修复”
+  // 这是第二步：ESLint 会在 Prettier 之后执行。
+  // 它会完成 Prettier 做不到的事情：
+  //   a. 根据 "simple-import-sort/imports" 规则，【排序】你的 import。
+  //   b. 根据内置规则，【删除】未使用的 import。
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // =================================================================
+  // TypeScript & Tailwind CSS 优化
+  // =================================================================
+
+  // 使用项目本地的 TypeScript 版本，确保一致性
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // 让 Tailwind 插件识别 clsx 和 tailwind-merge 中的类名
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "'([^']*)'"],
+    ["twMerge\\(([^)]*)\\)", "'([^']*)'"]
+  ],
+
+  // =================================================================
+  // 通用编辑器设置
+  // =================================================================
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.autoSave": "onFocusChange",
+
+  // =================================================================
+  // 文件和搜索设置
+  // =================================================================
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/package-lock.json": true,
+    "**/drizzle": true // 排除 drizzle 生成的文件夹
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.next": true
+  }
+}

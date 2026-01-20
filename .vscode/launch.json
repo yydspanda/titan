@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: Debug (Turbopack)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev", // 这会直接运行你 package.json 中的 "dev" 脚本
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      }
+    }
+  ]
+}

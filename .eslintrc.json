@@ -1,0 +1,20 @@
+{
+  // 你可能已经有 "extends": ["next/core-web-vitals"] 等配置，保留它们
+  "extends": "next/core-web-vitals",
+
+  // 1. 添加 "plugins" 字段（如果已有，则在数组中加入新插件）
+  "plugins": [
+    "simple-import-sort"
+  ],
+
+  // 2. 添加 "rules" 字段来启用排序规则
+  "rules": {
+    // --- 开启 import 自动排序 ---
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+
+    // --- 其他你可能需要的规则 ---
+    // 例如，如果你想让 ESLint 报告未使用的变量（它默认就会做）
+    "no-unused-vars": ["warn", { "args": "none" }]
+  }
+}

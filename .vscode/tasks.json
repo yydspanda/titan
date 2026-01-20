@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "DB: Generate Migrations",
+      "type": "npm",
+      "script": "db:generate",
+      "group": "build",
+      "presentation": { "reveal": "always", "clear": true }
+    },
+    {
+      "label": "DB: Open Studio",
+      "type": "npm",
+      "script": "db:studio",
+      "group": "build",
+      "presentation": { "reveal": "always", "clear": true }
+    },
+    {
+      "label": "Code: Lint All Files",
+      "type": "npm",
+      "script": "lint",
+      "group": "build",
+      "presentation": { "reveal": "always", "clear": true }
+    },
+    {
+      "label": "TypeScript: Check Types",
+      "type": "npm",
+      "script": "typecheck",
+      "problemMatcher": ["$tsc"],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "never", "clear": true }
+    }
+  ]
+}

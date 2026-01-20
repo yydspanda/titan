@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    // --- 核心工具 ---
+    "dbaeumer.vscode-eslint", // 必装：与你的 ESLint 配置集成
+    "esbenp.prettier-vscode", // 必装：代码格式化黄金搭档
+    "bradlc.vscode-tailwindcss", // 必装：为 Tailwind CSS 4 提供智能提示
+
+    // --- 数据库与环境 ---
+    "prisma.prisma", // 强烈推荐：Drizzle 的 schema 语法与 Prisma 类似，此插件能提供优秀的高亮和格式化
+    "mikestead.dotenv", // 推荐：为 .env 文件提供语法高亮
+
+    // --- 效率提升 ---
+    "dsznajder.es7-react-js-snippets", // 强烈推荐：快速生成 React 代码片段
+    "gitlens.eamodio", // 推荐：增强 Git 功能
+    "humao.rest-client" // 推荐：如果你需要测试 API
+  ]
+}
